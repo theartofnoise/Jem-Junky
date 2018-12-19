@@ -25,7 +25,7 @@ img {
     outline: none;
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
-    margin-top: 15px;
+    margin: 15px 100px 15px 100px;
     text-shadow:
 		-1px -1px 0 #9ecaed,
 		1px -1px 0 #9ecaed,
