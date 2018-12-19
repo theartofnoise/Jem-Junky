@@ -3,8 +3,7 @@
 
         //change letter color
         var colors = ["red", "yellow", "blue", "green", "pink", "aqua", "gold", "purple"], 
-        idx;
-    
+        idx;    
     $(function colorChange() {
         var div = $('#colorJem'); 
         var chars = div.text().split('');
