@@ -35,8 +35,7 @@ img {
 
 #grad {
     background-image: linear-gradient(to top, red,orange,yellow,green,blue,indigo,violet);
-    background-repeat: repeat-y;
-    
+      
 }
 body {
     padding-bottom: 90px;
