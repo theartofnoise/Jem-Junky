@@ -27,5 +27,6 @@ img {
 		-1px -1px 0 #9ecaed,
 		1px -1px 0 #9ecaed,
 		-1px 1px 0 #9ecaed,
-		1px 1px 0 #9ecaed;
+        1px 1px 0 #9ecaed;
+        margin-top: 15px;
 }
