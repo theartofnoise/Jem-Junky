@@ -1,6 +1,8 @@
 
-    $(document).ready(function() {
 
+    $(document).ready(function() {          
+        /*$("#arrow").animate({ top: "+=200px" }, "normal");*/
+        $('body').bind('touchmove', function(event) { event.preventDefault() }); // turns off
         //change letter color
         var colors = ["red", "yellow", "blue", "green", "pink", "aqua", "gold", "purple"], 
         idx;    
@@ -104,14 +106,14 @@
     //restarts goal
     bagLimit = randomizer(19,120);
     $("#bagLimit").text(bagLimit);
-    };
+    }; 
     
     //logic
     function clicked() {
         if (totalGems > bagLimit) {
         losses++;
         $("#losses").text(losses);
-        alert("you lose");
+        alert("Noooo...The bag broke!");
         restart();
     }
     if (totalGems === bagLimit) {
@@ -122,5 +124,6 @@
         alert("You Win!! You added "+totalGems+" Jems to your BANK!");
         restart()
     }
+    
     };
     });

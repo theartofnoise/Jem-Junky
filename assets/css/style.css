@@ -1,3 +1,12 @@
+#arrow {
+    border: 1px solid red;
+    height: 50px;
+    width: 120px;
+    position: fixed;
+    top: 77px;
+    left: -20px;
+}
+
 #rules { 
     color: rgb(255, 252, 64);
     font-weight:bold; 
