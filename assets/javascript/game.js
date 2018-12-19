@@ -119,7 +119,7 @@
         bank += totalGems;
         $("#wins").text(wins);
         $("#bank").text(bank);
-        alert("you win");
+        alert("You Win!! You added "+totalGems+" Jems to your BANK!");
         restart()
     }
     };
