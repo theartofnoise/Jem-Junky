@@ -1,8 +1,20 @@
 
 
-    $(document).ready(function() {          
-        /*$("#arrow").animate({ top: "+=200px" }, "normal");*/
-        $('body').bind('touchmove', function(event) { event.preventDefault() }); // turns off
+$(document).ready(function() { 
+
+        var popup = setTimeout(function () {
+            alert("You like this game! Haha!");
+        }, 300000);
+        setTimeout(function () {
+            $("#arrow").animate({ left: "+=500px" },2000);
+            $("#arrow").animate({ left: "-=500px" }, "normal");
+            
+        }, 3000);
+        $("#blue").animate({ right: "+=1500px" }, 2200);
+        $("#dark").animate({ left: "+=500px" }, 1000);
+        $("#multi").animate({ right: "+=500px" }, 1500);
+        $("#neon").animate({ right: "+=1500px" }, 1500);
+
         //change letter color
         var colors = ["red", "yellow", "blue", "green", "pink", "aqua", "gold", "purple"], 
         idx;    

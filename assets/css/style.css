@@ -1,12 +1,33 @@
 #arrow {
-    border: 1px solid red;
-    height: 50px;
-    width: 120px;
+    border: 1px solid #9ecaed;
+    
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
     position: fixed;
     top: 77px;
-    left: -20px;
+    left: -220px;
+    /*background-image: url("../images/arrow1.png");*/
+    background-size: auto;
+    
 }
 
+#blue {
+    position: relative;
+    right: -1500px;
+}
+#dark {
+    position: relative;
+    left: -500px;
+}
+#multi {
+    position: relative;
+    right: -500px;
+}
+#neon {
+    position: relative;
+    right: -1500px;
+}
 #rules { 
     color: rgb(255, 252, 64);
     font-weight:bold; 
@@ -53,5 +74,8 @@ body {
     .jemJunk {
       margin-left: 0px;
       margin-right: 0px;
+    }
+    #arrow {
+        display: none;
     }
   }
