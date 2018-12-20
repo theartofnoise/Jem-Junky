@@ -1,7 +1,7 @@
 
 
 $(document).ready(function() { 
-    var speed = 3000;
+    var speed = 30000;
     
         var setTimer = true;
         var timeOn = function() {
