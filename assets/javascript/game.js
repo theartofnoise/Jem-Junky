@@ -1,21 +1,23 @@
 
 
 $(document).ready(function() { 
-    var speed = 30000;
-    
+    var speed = 3000;
+        var myVar;
         var setTimer = true;
         var timeOn = function() {
             
             if (setTimer) {
             $("#timer").animate({ height: "-=480px" }, speed);
-            setTimeout(function () {
+            myVar = setTimeout(function () {
                 alert("times up!");
                 restart();                
+                
             }, speed);
             }
         };
         var timeOff = function() {
             $("#timer").animate({ height: "480px" }, 1000);
+            clearTimeout(timeOn);
         }
         //popup after 5mins of gameplay
         setTimeout(function () {
@@ -135,7 +137,8 @@ $(document).ready(function() {
     function restart() {
         $("#timer").stop();
         timeOff();
-        //setTimer=true;
+        setTimer=true;
+        clearTimeout();
         totalGems=0;
         $("#totalGems").text(0);
         //restarts gems
@@ -155,6 +158,7 @@ $(document).ready(function() {
         if (totalGems > bagLimit) {
         losses++;
         $("#losses").text(losses);
+        clearTimeout(myVar);
         alert("Noooo...The bag broke!");
         restart();
     }
@@ -163,6 +167,7 @@ $(document).ready(function() {
         bank += totalGems;
         $("#wins").text(wins);
         $("#bank").text(bank);
+        clearTimeout(myVar);
         alert("You Win!! You added "+totalGems+" Jems to your BANK!");
         restart()
     }
