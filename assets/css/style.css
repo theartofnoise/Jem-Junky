@@ -18,8 +18,15 @@
     width: 5px;
     position: fixed;
     right: 10px;
-    bottom: 40px;
-    display: none;
+    bottom: 104px;
+    
+
+}
+#time {
+    position: fixed;
+    right: 10px;
+    top: 270px;
+    transform: rotate(270deg);
 }
 
 #blue {
@@ -42,6 +49,7 @@
     color: rgb(255, 252, 64);
     font-weight:bold; 
     font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
 }
 img {
     margin-bottom: 5px;
@@ -88,4 +96,19 @@ body {
     #arrow {
         display: none;
     }
+  /*  #timer {
+        background-color: red;
+        border: 2px solid black;
+        height: 480px;
+        width: 5px;
+        position: fixed;
+        right: 10px;
+        top: 160px;
+    }
+    #time {
+        position: fixed;
+        right: 10px;
+        top: 350px;
+        transform: rotate(90deg);
+    }*/
   }

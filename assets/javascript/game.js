@@ -1,17 +1,33 @@
 
 
 $(document).ready(function() { 
-
-        var timerOn = false;
-       
-        var popup = setTimeout(function () {
+    var speed = 3000;
+    
+        var setTimer = true;
+        var timeOn = function() {
+            
+            if (setTimer) {
+            $("#timer").animate({ height: "-=480px" }, speed);
+            setTimeout(function () {
+                alert("times up!");
+                restart();                
+            }, speed);
+            }
+        };
+        var timeOff = function() {
+            $("#timer").animate({ height: "480px" }, 1000);
+        }
+        //popup after 5mins of gameplay
+        setTimeout(function () {
             alert("You like this game! Haha!");
         }, 300000);
+        //good luck sign
         setTimeout(function () {
             $("#arrow").animate({ left: "+=200px" },2000);
             $("#arrow").animate({ left: "-=200px" }, "normal");
             
         }, 3000);
+        //gems enter in
         $("#blue").animate({ right: "+=1500px" }, 2200);
         $("#dark").animate({ left: "+=500px" }, 1000);
         $("#multi").animate({ right: "+=500px" }, 1500);
@@ -81,12 +97,8 @@ $(document).ready(function() {
     
     //buttons clicked
         $("#blue").on("click", function() {
-        timerOn=true;
-        if(timerOn) {
-            $("#timer").animate({ height: "-=480px" }, 30000);
-        } else {
-            $("#timer").animate({ height: "480px" }, 1000);
-        }
+        timeOn();
+        setTimer=false;
         totalGems += blueVal;
         console.log("TG "+totalGems);
         //user total
@@ -94,6 +106,8 @@ $(document).ready(function() {
         clicked();
     });
     $("#dark").on("click", function() {
+        timeOn();
+        setTimer=false;
         totalGems += darkVal;
         console.log("TG "+totalGems);
         $("#totalGems").text(totalGems);
@@ -101,12 +115,16 @@ $(document).ready(function() {
         
     });
     $("#multi").on("click", function() {
+        timeOn();
+        setTimer=false;
         totalGems += multiVal;
         console.log("TG "+totalGems);
         $("#totalGems").text(totalGems);
         clicked();
     });
     $("#neon").on("click", function() {
+        timeOn();
+        setTimer=false;
         totalGems += neonVal;
         console.log("TG "+totalGems);
         $("#totalGems").text(totalGems);
@@ -115,6 +133,9 @@ $(document).ready(function() {
 
     //restart
     function restart() {
+        $("#timer").stop();
+        timeOff();
+        //setTimer=true;
         totalGems=0;
         $("#totalGems").text(0);
         //restarts gems
