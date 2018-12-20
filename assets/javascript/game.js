@@ -2,12 +2,14 @@
 
 $(document).ready(function() { 
 
+        var timerOn = false;
+       
         var popup = setTimeout(function () {
             alert("You like this game! Haha!");
         }, 300000);
         setTimeout(function () {
-            $("#arrow").animate({ left: "+=500px" },2000);
-            $("#arrow").animate({ left: "-=500px" }, "normal");
+            $("#arrow").animate({ left: "+=200px" },2000);
+            $("#arrow").animate({ left: "-=200px" }, "normal");
             
         }, 3000);
         $("#blue").animate({ right: "+=1500px" }, 2200);
@@ -79,6 +81,12 @@ $(document).ready(function() {
     
     //buttons clicked
         $("#blue").on("click", function() {
+        timerOn=true;
+        if(timerOn) {
+            $("#timer").animate({ height: "-=480px" }, 30000);
+        } else {
+            $("#timer").animate({ height: "480px" }, 1000);
+        }
         totalGems += blueVal;
         console.log("TG "+totalGems);
         //user total
@@ -104,6 +112,7 @@ $(document).ready(function() {
         $("#totalGems").text(totalGems);
         clicked();
     });
+
     //restart
     function restart() {
         totalGems=0;

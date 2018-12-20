@@ -6,10 +6,20 @@
     padding-top: 8px;
     position: fixed;
     top: 77px;
-    left: -220px;
+    left: -190px;
     /*background-image: url("../images/arrow1.png");*/
     background-size: auto;
     
+}
+#timer {
+    background-color: red;
+    border: 2px solid black;
+    height: 480px;
+    width: 5px;
+    position: fixed;
+    right: 10px;
+    bottom: 40px;
+    display: none;
 }
 
 #blue {
