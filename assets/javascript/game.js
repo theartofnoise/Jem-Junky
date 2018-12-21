@@ -1,13 +1,33 @@
 
 
 $(document).ready(function() { 
+//this supposedly disables doubletap zoom on iOS
+    (function($) {
+        $.fn.nodoubletapzoom = function() {
+            $(this).bind('touchstart', function preventZoom(e) {
+              var t2 = e.timeStamp
+                , t1 = $(this).data('lastTouch') || t2
+                , dt = t2 - t1
+                , fingers = e.originalEvent.touches.length;
+              $(this).data('lastTouch', t2);
+              if (!dt || dt > 500 || fingers > 1) return; // not double-tap
+      
+              e.preventDefault(); // double tap - prevent the zoom
+              // also synthesize click events we just swallowed up
+              $(this).trigger('click').trigger('click');
+            });
+        };
+      })(jQuery);
+
+
+
     var speed = 30000;
         var myVar;
         var setTimer = true;
         var timeOn = function() {
             
             if (setTimer) {
-            $("#timer").animate({ height: "-=480px" }, speed);
+            $("#timer").animate({ width: "-=85%" }, speed);
             myVar = setTimeout(function () {
                 alert("times up!");
                 restart();                
@@ -16,17 +36,18 @@ $(document).ready(function() {
             }
         };
         var timeOff = function() {
-            $("#timer").animate({ height: "480px" }, 1000);
+            $("#timer").animate({ width: "85%" }, 1000);
             clearTimeout(timeOn);
         }
         //popup after 5mins of gameplay
         setTimeout(function () {
             alert("You like this game! Haha!");
         }, 300000);
-        //good luck sign
+        //touch the jems sign
         setTimeout(function () {
-            $("#arrow").animate({ left: "+=200px" },2000);
-            $("#arrow").animate({ left: "-=200px" }, "normal");
+            $("#arrow").animate({ top: "+=790px" },2000);
+            $("#arrow").animate({ top: "-=50px" },2000);
+            $("#arrow").animate({ top: "-=790px" }, "normal");
             
         }, 3000);
         //gems enter in
