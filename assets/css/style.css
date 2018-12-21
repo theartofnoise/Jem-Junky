@@ -99,7 +99,10 @@ body {
     #arrow {
         top: -250px;
     }
-    
+    #bankStyle {
+        color: #48ff00!important;
+        
+    }*/
     #grad {
         height: 1080px;
     }
