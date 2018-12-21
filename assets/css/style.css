@@ -22,11 +22,13 @@
     border: 2px solid black;
     height: 5px;
     width: 85%;
-    margin: auto;
-    
-    
+    margin: auto; 
 
 }
+#bankStyle {
+        color: #48ff00;
+        
+    }
 #time {
     
 }
@@ -86,10 +88,23 @@ img {
 #grad {
     background-image: linear-gradient(to top, red,orange,yellow,green,blue,indigo,violet);
     height: 1080px;
+    position: relative;
   
 }
 body {
     padding-bottom: 90px;
+}
+html {
+    
+}
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    border-radius: 0rem;
+    color: rgb(77, 77, 77)
+    
 }
 @media only screen and (max-width: 500px) {
     .jemJunk {
@@ -99,10 +114,7 @@ body {
     #arrow {
         top: -250px;
     }
-    #bankStyle {
-        color: #48ff00!important;
-        
-    }*/
+    
     #grad {
         height: 1080px;
     }
