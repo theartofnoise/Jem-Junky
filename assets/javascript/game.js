@@ -20,8 +20,8 @@ $(document).ready(function() {
       })(jQuery);
 
 
-
-    var speed = 30000;
+        //timer speed
+        var speed = 20000;
         var myVar;
         var setTimer = true;
         var timeOn = function() {
@@ -41,7 +41,7 @@ $(document).ready(function() {
         }
         //popup after 5mins of gameplay
         setTimeout(function () {
-            alert("You like this game! Haha!");
+            alert("If you like this game, you should hire me!");
         }, 300000);
         //touch the jems sign
         setTimeout(function () {
